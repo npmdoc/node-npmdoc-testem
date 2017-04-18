@@ -1,0 +1,5120 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/testem/testem#readme">testem (v1.15.0)</a>
+</h1>
+<h4>Test'em 'scripts! Javascript Unit testing made easy.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem">module testem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.testem">
+            function <span class="apidocSignatureSpan"></span>testem
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.api">
+            function <span class="apidocSignatureSpan">testem.</span>api
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app">
+            function <span class="apidocSignatureSpan">testem.</span>app
+            <span class="apidocSignatureSpan">(config, finalizer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config">
+            function <span class="apidocSignatureSpan">testem.</span>config
+            <span class="apidocSignatureSpan">(appMode, progOptions, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.file_watcher">
+            function <span class="apidocSignatureSpan">testem.</span>file_watcher
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher">
+            function <span class="apidocSignatureSpan">testem.</span>launcher
+            <span class="apidocSignatureSpan">(name, settings, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher_factory">
+            function <span class="apidocSignatureSpan">testem.</span>launcher_factory
+            <span class="apidocSignatureSpan">(name, settings, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.process_ctl">
+            function <span class="apidocSignatureSpan">testem.</span>process_ctl
+            <span class="apidocSignatureSpan">(name, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.tap_consumer">
+            function <span class="apidocSignatureSpan">testem.</span>tap_consumer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.toString">
+            function <span class="apidocSignatureSpan">testem.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>api.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>app.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>browser_launcher</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>config.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>displayutils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>file_watcher.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>fileutils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>launcher.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>launcher_factory.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>process_ctl.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>strutils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.</span>tap_consumer.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.api">module testem.api</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.api.api">
+            function <span class="apidocSignatureSpan">testem.</span>api
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.api.prototype">module testem.api.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.api.prototype.configureLogging">
+            function <span class="apidocSignatureSpan">testem.api.prototype.</span>configureLogging
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.api.prototype.restart">
+            function <span class="apidocSignatureSpan">testem.api.prototype.</span>restart
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.api.prototype.setup">
+            function <span class="apidocSignatureSpan">testem.api.prototype.</span>setup
+            <span class="apidocSignatureSpan">(mode, finalizer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.api.prototype.startCI">
+            function <span class="apidocSignatureSpan">testem.api.prototype.</span>startCI
+            <span class="apidocSignatureSpan">(options, finalizer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.api.prototype.startDev">
+            function <span class="apidocSignatureSpan">testem.api.prototype.</span>startDev
+            <span class="apidocSignatureSpan">(options, finalizer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.api.prototype.startServer">
+            function <span class="apidocSignatureSpan">testem.api.prototype.</span>startServer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.app">module testem.app</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.app">
+            function <span class="apidocSignatureSpan">testem.</span>app
+            <span class="apidocSignatureSpan">(config, finalizer)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.app.prototype">module testem.app.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.addRunner">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>addRunner
+            <span class="apidocSignatureSpan">(runner)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.configureFileWatch">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>configureFileWatch
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.createRunners">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>createRunners
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.createTestRunner">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>createTestRunner
+            <span class="apidocSignatureSpan">(launcher, reporter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.exit">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>exit
+            <span class="apidocSignatureSpan">(err, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.fileWatch">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>fileWatch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.getExitCode">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>getExitCode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.getRunnerFactory">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>getRunnerFactory
+            <span class="apidocSignatureSpan">(launcher)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.getRunners">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>getRunners
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.getServer">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>getServer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.killRunners">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>killRunners
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.launchers">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>launchers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.onBrowserLogin">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>onBrowserLogin
+            <span class="apidocSignatureSpan">(browserName, id, socket)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.onFileRequested">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>onFileRequested
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.onServerError">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>onServerError
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.runHook">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>runHook
+            <span class="apidocSignatureSpan">(hook, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.runTests">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>runTests
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.singleRun">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>singleRun
+            <span class="apidocSignatureSpan">(timeout)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.start">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.startServer">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>startServer
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.stopCurrentRun">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>stopCurrentRun
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.stopRunners">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>stopRunners
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.stopServer">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>stopServer
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.triggerRun">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>triggerRun
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.waitForTests">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>waitForTests
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.withTestTimeout">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>withTestTimeout
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.app.prototype.wrapUp">
+            function <span class="apidocSignatureSpan">testem.app.prototype.</span>wrapUp
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.browser_launcher">module testem.browser_launcher</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.browser_launcher.getAvailableBrowsers">
+            function <span class="apidocSignatureSpan">testem.browser_launcher.</span>getAvailableBrowsers
+            <span class="apidocSignatureSpan">(config, browsers, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.config">module testem.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.config">
+            function <span class="apidocSignatureSpan">testem.</span>config
+            <span class="apidocSignatureSpan">(appMode, progOptions, config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.config.prototype">module testem.config.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.cwd">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>cwd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.get">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>get
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getAllOptions">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getAllOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getAvailableLaunchers">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getAvailableLaunchers
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getCSSFiles">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getCSSFiles
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getConfigProperty">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getConfigProperty
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getFileSet">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getFileSet
+            <span class="apidocSignatureSpan">(want, dontWant, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getHomeDir">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getHomeDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getLaunchers">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getLaunchers
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getServeFiles">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getServeFiles
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getSrcFiles">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getSrcFiles
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getTemplateData">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getTemplateData
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getTestPage">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getTestPage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getUserDataDir">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getUserDataDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getWantedLauncherNames">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getWantedLauncherNames
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.getWantedLaunchers">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>getWantedLaunchers
+            <span class="apidocSignatureSpan">(available, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.isCwdMode">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>isCwdMode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.mergeUrlAndQueryParams">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>mergeUrlAndQueryParams
+            <span class="apidocSignatureSpan">(urlString, queryParamsObj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.printLauncherInfo">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>printLauncherInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.read">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>read
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.readConfigFile">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>readConfigFile
+            <span class="apidocSignatureSpan">(configFile, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.readJS">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>readJS
+            <span class="apidocSignatureSpan">(configFile, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.readJSON">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>readJSON
+            <span class="apidocSignatureSpan">(configFile, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.readYAML">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>readYAML
+            <span class="apidocSignatureSpan">(configFile, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.resolveConfigPath">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>resolveConfigPath
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.resolvePath">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>resolvePath
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.reverseResolvePath">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>reverseResolvePath
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.config.prototype.set">
+            function <span class="apidocSignatureSpan">testem.config.prototype.</span>set
+            <span class="apidocSignatureSpan">(key, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">testem.config.prototype.</span>defaults</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.displayutils">module testem.displayutils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.displayutils.resultString">
+            function <span class="apidocSignatureSpan">testem.displayutils.</span>resultString
+            <span class="apidocSignatureSpan">(id, prefix, result)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.file_watcher">module testem.file_watcher</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.file_watcher.file_watcher">
+            function <span class="apidocSignatureSpan">testem.</span>file_watcher
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.file_watcher.prototype">module testem.file_watcher.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.file_watcher.prototype.add">
+            function <span class="apidocSignatureSpan">testem.file_watcher.prototype.</span>add
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.file_watcher.prototype.onEMFILE">
+            function <span class="apidocSignatureSpan">testem.file_watcher.prototype.</span>onEMFILE
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.file_watcher.prototype.onFileChanged">
+            function <span class="apidocSignatureSpan">testem.file_watcher.prototype.</span>onFileChanged
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.fileutils">module testem.fileutils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.fileutils.executableExists">
+            function <span class="apidocSignatureSpan">testem.fileutils.</span>executableExists
+            <span class="apidocSignatureSpan">(exe, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.fileutils.fileExists">
+            function <span class="apidocSignatureSpan">testem.fileutils.</span>fileExists
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.launcher">module testem.launcher</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.launcher">
+            function <span class="apidocSignatureSpan">testem.</span>launcher
+            <span class="apidocSignatureSpan">(name, settings, config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.launcher.prototype">module testem.launcher.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.browserTmpDir">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>browserTmpDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.commandLine">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>commandLine
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.doLaunch">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>doLaunch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.getArgs">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>getArgs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.getId">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>getId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.getUrl">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>getUrl
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.isProcess">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>isProcess
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.launch">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>launch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.protocol">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>protocol
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.setupDefaultSettings">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>setupDefaultSettings
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.start">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher.prototype.template">
+            function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>template
+            <span class="apidocSignatureSpan">(thing)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.launcher_factory">module testem.launcher_factory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher_factory.launcher_factory">
+            function <span class="apidocSignatureSpan">testem.</span>launcher_factory
+            <span class="apidocSignatureSpan">(name, settings, config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.launcher_factory.prototype">module testem.launcher_factory.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.launcher_factory.prototype.create">
+            function <span class="apidocSignatureSpan">testem.launcher_factory.prototype.</span>create
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.process_ctl">module testem.process_ctl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.process_ctl.process_ctl">
+            function <span class="apidocSignatureSpan">testem.</span>process_ctl
+            <span class="apidocSignatureSpan">(name, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.process_ctl.prototype">module testem.process_ctl.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.process_ctl.prototype.exeExists">
+            function <span class="apidocSignatureSpan">testem.process_ctl.prototype.</span>exeExists
+            <span class="apidocSignatureSpan">(exe, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.process_ctl.prototype.exec">
+            function <span class="apidocSignatureSpan">testem.process_ctl.prototype.</span>exec
+            <span class="apidocSignatureSpan">(cmd, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.process_ctl.prototype.prepareOptions">
+            function <span class="apidocSignatureSpan">testem.process_ctl.prototype.</span>prepareOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.process_ctl.prototype.spawn">
+            function <span class="apidocSignatureSpan">testem.process_ctl.prototype.</span>spawn
+            <span class="apidocSignatureSpan">(exe, args, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.strutils">module testem.strutils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.strutils.indent">
+            function <span class="apidocSignatureSpan">testem.strutils.</span>indent
+            <span class="apidocSignatureSpan">(text, width)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.strutils.pad">
+            function <span class="apidocSignatureSpan">testem.strutils.</span>pad
+            <span class="apidocSignatureSpan">(str, l, s, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.strutils.splitLines">
+            function <span class="apidocSignatureSpan">testem.strutils.</span>splitLines
+            <span class="apidocSignatureSpan">(text, colLimit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.strutils.template">
+            function <span class="apidocSignatureSpan">testem.strutils.</span>template
+            <span class="apidocSignatureSpan">(str, params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.tap_consumer">module testem.tap_consumer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.tap_consumer.tap_consumer">
+            function <span class="apidocSignatureSpan">testem.</span>tap_consumer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.testem.tap_consumer.prototype">module testem.tap_consumer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.tap_consumer.prototype.onTapAssert">
+            function <span class="apidocSignatureSpan">testem.tap_consumer.prototype.</span>onTapAssert
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.tap_consumer.prototype.onTapEnd">
+            function <span class="apidocSignatureSpan">testem.tap_consumer.prototype.</span>onTapEnd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.tap_consumer.prototype.onTapError">
+            function <span class="apidocSignatureSpan">testem.tap_consumer.prototype.</span>onTapError
+            <span class="apidocSignatureSpan">(reason)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.testem.tap_consumer.prototype.onTapExtra">
+            function <span class="apidocSignatureSpan">testem.tap_consumer.prototype.</span>onTapExtra
+            <span class="apidocSignatureSpan">(extra)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem" id="apidoc.module.testem">module testem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.testem" id="apidoc.element.testem.testem">
+        function <span class="apidocSignatureSpan"></span>testem
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Api() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.api" id="apidoc.element.testem.api">
+        function <span class="apidocSignatureSpan">testem.</span>api
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Api() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app" id="apidoc.element.testem.app">
+        function <span class="apidocSignatureSpan">testem.</span>app
+        <span class="apidocSignatureSpan">(config, finalizer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function App(config, finalizer) {
+  this.exited = false;
+  this.paused = false;
+  this.config = config;
+  this.stdoutStream = config.get('stdout_stream') || process.stdout;
+  this.server = new Server(this.config);
+  this.results = [];
+  this.runnerIndex = 0;
+  this.runners = [];
+  this.timeoutID = undefined;
+
+  this.reportFileName = this.config.get('report_file');
+
+  this.cleanExit = function(err) {
+    var alreadyExit = false;
+    if (!alreadyExit) {
+      alreadyExit = true;
+
+      var exitCode = err ? 1 : 0;
+
+      if (err &amp;&amp; err.hideFromReporter) {
+        err = null;
+      }
+
+      (finalizer || cleanExit)(exitCode, err);
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config" id="apidoc.element.testem.config">
+        function <span class="apidocSignatureSpan">testem.</span>config
+        <span class="apidocSignatureSpan">(appMode, progOptions, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Config(appMode, progOptions, config) {
+  this.appMode = appMode;
+  this.progOptions = progOptions || {};
+  this.fileOptions = {};
+  this.config = config || {};
+  this.getters = {
+    test_page: 'getTestPage'
+  };
+
+  if (appMode === 'dev') {
+    this.progOptions.reporter = 'dev';
+    this.progOptions.parallel = -1;
+  }
+
+  if (this.progOptions.debug === true) {
+    this.progOptions.debug = 'testem.log';
+  }
+
+  if (appMode === 'ci') {
+    this.progOptions.disable_watching = true;
+    this.progOptions.single_run = true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.file_watcher" id="apidoc.element.testem.file_watcher">
+        function <span class="apidocSignatureSpan">testem.</span>file_watcher
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">file_watcher = function (config) {
+  this.fileWatcher = fireworm('./', {
+    ignoreInitial: true,
+    skipDirEntryPatterns: []
+  });
+  var onFileChanged = this.onFileChanged.bind(this);
+  this.fileWatcher.on('change', onFileChanged);
+  this.fileWatcher.on('add', onFileChanged);
+  this.fileWatcher.on('remove', onFileChanged);
+  this.fileWatcher.on('emfile', this.onEMFILE.bind(this));
+
+  var watchFiles = config.get('watch_files');
+  this.fileWatcher.clear();
+  var confFile = config.get('file');
+  if (confFile) {
+    this.fileWatcher.add(confFile);
+  }
+  if (config.isCwdMode()) {
+    this.fileWatcher.add('*.js');
+  }
+  if (watchFiles) {
+    this.fileWatcher.add(watchFiles);
+  }
+  var srcFiles = config.get('src_files') || '*.js';
+  this.fileWatcher.add(srcFiles);
+  var ignoreFiles = config.get('src_files_ignore');
+  if (ignoreFiles) {
+    this.fileWatcher.ignore(ignoreFiles);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher" id="apidoc.element.testem.launcher">
+        function <span class="apidocSignatureSpan">testem.</span>launcher
+        <span class="apidocSignatureSpan">(name, settings, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Launcher(name, settings, config) {
+  this.name = name;
+  this.config = config;
+  this.settings = settings;
+  this.setupDefaultSettings();
+  this.id = settings.id || String(Math.floor(Math.random() * 10000));
+
+  this.processCtl = new ProcessCtl(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher_factory" id="apidoc.element.testem.launcher_factory">
+        function <span class="apidocSignatureSpan">testem.</span>launcher_factory
+        <span class="apidocSignatureSpan">(name, settings, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LauncherFactory(name, settings, config) {
+  this.name = name;
+  this.config = config;
+  this.settings = settings;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.process_ctl" id="apidoc.element.testem.process_ctl">
+        function <span class="apidocSignatureSpan">testem.</span>process_ctl
+        <span class="apidocSignatureSpan">(name, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProcessCtl(name, options) {
+  options = options || {};
+
+  this.name = name;
+  this.killTimeout = options.killTimeout || 5000;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.tap_consumer" id="apidoc.element.testem.tap_consumer">
+        function <span class="apidocSignatureSpan">testem.</span>tap_consumer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TapConsumer() {
+  this.stream = new TapParser();
+  this.stream.on('assert', this.onTapAssert.bind(this));
+  this.stream.on('extra', this.onTapExtra.bind(this));
+
+  this.stream.on('complete', this.onTapEnd.bind(this));
+  this.stream.on('bailout', this.onTapError.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.toString" id="apidoc.element.testem.toString">
+        function <span class="apidocSignatureSpan">testem.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  var result = {
+    failed: 1,
+    passed: 0,
+    name: 'testem',
+    launcherId: 0,
+    error: {
+      message: err.<span class="apidocCodeKeywordSpan">toString</span>()
+    }
+  };
+
+  self.reporter.report('testem', result);
+}).finally(function() {
+  self.reporter.onEnd('testem', { launcherId: 0 });
+});
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.api" id="apidoc.module.testem.api">module testem.api</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.api.api" id="apidoc.element.testem.api.api">
+        function <span class="apidocSignatureSpan">testem.</span>api
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Api() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.api.prototype" id="apidoc.module.testem.api.prototype">module testem.api.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.api.prototype.configureLogging" id="apidoc.element.testem.api.prototype.configureLogging">
+        function <span class="apidocSignatureSpan">testem.api.prototype.</span>configureLogging
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configureLogging = function () {
+  var debug = this.config.get('debug');
+  if (debug) {
+    log.stream = fs.createWriteStream(debug);
+  } else {
+    var fakeStream = new EventEmitter();
+    fakeStream.write = function() {};
+    log.stream = fakeStream;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.api.prototype.restart" id="apidoc.element.testem.api.prototype.restart">
+        function <span class="apidocSignatureSpan">testem.api.prototype.</span>restart
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restart = function () {
+  this.app.triggerRun('Api: restart');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.api.prototype.setup" id="apidoc.element.testem.api.prototype.setup">
+        function <span class="apidocSignatureSpan">testem.api.prototype.</span>setup
+        <span class="apidocSignatureSpan">(mode, finalizer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (mode, finalizer) {
+  var self = this;
+  this.config = new Config(mode, this.options);
+  this.configureLogging();
+  log.info('Test\'em starting..');
+  this.config.read(function() {
+    self.app = new App(self.config, finalizer);
+    self.app.start();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.api.prototype.startCI" id="apidoc.element.testem.api.prototype.startCI">
+        function <span class="apidocSignatureSpan">testem.api.prototype.</span>startCI
+        <span class="apidocSignatureSpan">(options, finalizer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startCI = function (options, finalizer) {
+  this.options = options;
+  this.setup('ci', finalizer);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (appMode === 'launchers') {
+    config.read(function() {
+      config.printLauncherInfo();
+    });
+  } else {
+    var api = new Api();
+    if (appMode === 'ci') {
+      api.<span class="apidocCodeKeywordSpan">startCI</span>(progOptions);
+    } else if (appMode === 'dev') {
+      api.startDev(progOptions);
+    } else if (appMode === 'server') {
+      api.startServer(progOptions);
+    }
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.api.prototype.startDev" id="apidoc.element.testem.api.prototype.startDev">
+        function <span class="apidocSignatureSpan">testem.api.prototype.</span>startDev
+        <span class="apidocSignatureSpan">(options, finalizer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startDev = function (options, finalizer) {
+  this.options = options;
+  this.setup('dev', finalizer);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      config.printLauncherInfo();
+    });
+  } else {
+    var api = new Api();
+    if (appMode === 'ci') {
+      api.startCI(progOptions);
+    } else if (appMode === 'dev') {
+      api.<span class="apidocCodeKeywordSpan">startDev</span>(progOptions);
+    } else if (appMode === 'server') {
+      api.startServer(progOptions);
+    }
+  }
+}
+
+// this is to workaround the weird behavior in command where
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.api.prototype.startServer" id="apidoc.element.testem.api.prototype.startServer">
+        function <span class="apidocSignatureSpan">testem.api.prototype.</span>startServer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startServer = function (options) {
+  this.options = options;
+  var config = this.config = new Config('server', this.options);
+  config.read(function() {
+    var server = new Server(config);
+    server.start();
+    server.on('server-start', function() {
+      console.log('Open ' + config.get('url') + ' in a browser to connect.');
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.server.on('server-error', this.onServerError.bind(this));
+
+  return this.server.start().asCallback(callback);
+},
+
+getServer: function() {
+  var self = this;
+  return this.<span class="apidocCodeKeywordSpan">startServer</span>().disposer(function() {
+    return self.stopServer();
+  });
+},
+
+onFileRequested: function(filepath) {
+  if (this.fileWatcher &amp;&amp; !this.config.get('serve_files')) {
+    this.fileWatcher.add(filepath);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.app" id="apidoc.module.testem.app">module testem.app</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.app" id="apidoc.element.testem.app.app">
+        function <span class="apidocSignatureSpan">testem.</span>app
+        <span class="apidocSignatureSpan">(config, finalizer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function App(config, finalizer) {
+  this.exited = false;
+  this.paused = false;
+  this.config = config;
+  this.stdoutStream = config.get('stdout_stream') || process.stdout;
+  this.server = new Server(this.config);
+  this.results = [];
+  this.runnerIndex = 0;
+  this.runners = [];
+  this.timeoutID = undefined;
+
+  this.reportFileName = this.config.get('report_file');
+
+  this.cleanExit = function(err) {
+    var alreadyExit = false;
+    if (!alreadyExit) {
+      alreadyExit = true;
+
+      var exitCode = err ? 1 : 0;
+
+      if (err &amp;&amp; err.hideFromReporter) {
+        err = null;
+      }
+
+      (finalizer || cleanExit)(exitCode, err);
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.app.prototype" id="apidoc.module.testem.app.prototype">module testem.app.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.addRunner" id="apidoc.element.testem.app.prototype.addRunner">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>addRunner
+        <span class="apidocSignatureSpan">(runner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addRunner = function (runner) {
+  this.runners.push(runner);
+  this.emit('runnerAdded', runner);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (!browser) {
+    var launcher = new Launcher(browserName, {
+      id: id,
+      protocol: 'browser'
+    }, this.config);
+    browser = new BrowserTestRunner(launcher, this.reporter, this.runnerIndex++, this.config);
+    this.<span class="apidocCodeKeywordSpan">addRunner</span>(browser);
+  }
+
+  browser.tryAttach(browserName, id, socket);
+},
+
+addRunner: function(runner) {
+  this.runners.push(runner);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.configureFileWatch" id="apidoc.element.testem.app.prototype.configureFileWatch">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>configureFileWatch
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configureFileWatch = function (cb) {
+  if (this.config.get('disable_watching')) {
+    return Bluebird.resolve().asCallback(cb);
+  }
+
+  this.fileWatcher = new FileWatcher(this.config);
+  this.fileWatcher.on('fileChanged', function(filepath) {
+    log.info(filepath + ' changed (' + (this.disableFileWatch ? 'disabled' : 'enabled') + ').');
+    if (this.disableFileWatch || this.paused) {
+      return;
+    }
+    var configFile = this.config.get('file');
+    if ((configFile &amp;&amp; filepath === Path.resolve(configFile)) ||
+      (this.config.isCwdMode() &amp;&amp; filepath === process.cwd())) {
+      // config changed
+      this.configure(function() {
+        this.triggerRun('Config changed');
+      }.bind(this));
+    } else {
+      Bluebird.using(this.runHook('on_change', {file: filepath}), function() {
+        this.triggerRun('File changed: ' + filepath);
+      }.bind(this));
+    }
+  }.bind(this));
+  this.fileWatcher.on('EMFILE', function() {
+    var view = this.view;
+    var text = [
+      'The file watcher received a EMFILE system error, which means that ',
+      'it has hit the maximum number of files that can be open at a time. ',
+      'Luckily, you can increase this limit as a workaround. See the directions below \n \n',
+      'Linux: http://stackoverflow.com/a/34645/5304\n',
+      'Mac OS: http://serverfault.com/a/15575/47234'
+    ].join('');
+    view.setErrorPopupMessage(new StyledString(text + '\n ').foreground('megenta'));
+  }.bind(this));
+
+  return Bluebird.resolve().asCallback(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+addRunner: function(runner) {
+  this.runners.push(runner);
+  this.emit('runnerAdded', runner);
+},
+
+fileWatch: function() {
+  return this.<span class="apidocCodeKeywordSpan">configureFileWatch</span>().disposer(function() {
+    return;
+  });
+},
+
+configureFileWatch: function(cb) {
+  if (this.config.get('disable_watching')) {
+    return Bluebird.resolve().asCallback(cb);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.createRunners" id="apidoc.element.testem.app.prototype.createRunners">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>createRunners
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createRunners = function (callback) {
+  var self = this;
+  var reporter = this.reporter;
+  this.config.getLaunchers(function(err, launchers) {
+    if (err) {
+      return callback(err);
+    }
+
+    var testPages = self.config.get('test_page');
+    launchers.forEach(function(launcher) {
+      for (var i = 0; i &lt; testPages.length; i++) {
+        var launcherInstance = launcher.create({ test_page: testPages[i] });
+        var runner = self.createTestRunner(launcherInstance, reporter);
+        self.addRunner(runner);
+      }
+    });
+
+    callback(null);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  return Bluebird.resolve().asCallback(cb);
+},
+
+getRunners: function() {
+  var self = this;
+  return Bluebird.fromCallback(function(callback) {
+    self.<span class="apidocCodeKeywordSpan">createRunners</span>(callback);
+  }).disposer(function() {
+    return self.killRunners();
+  });
+},
+
+createRunners: function(callback) {
+  var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.createTestRunner" id="apidoc.element.testem.app.prototype.createTestRunner">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>createTestRunner
+        <span class="apidocSignatureSpan">(launcher, reporter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createTestRunner = function (launcher, reporter) {
+  var singleRun = this.config.get('single_run');
+
+  return new (this.getRunnerFactory(launcher))(launcher, reporter, this.runnerIndex++, singleRun, this.config);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return callback(err);
+    }
+
+    var testPages = self.config.get('test_page');
+    launchers.forEach(function(launcher) {
+      for (var i = 0; i &lt; testPages.length; i++) {
+        var launcherInstance = launcher.create({ test_page: testPages[i] });
+        var runner = self.<span class="apidocCodeKeywordSpan">createTestRunner</span>(launcherInstance, reporter);
+        self.addRunner(runner);
+      }
+    });
+
+    callback(null);
+  });
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.exit" id="apidoc.element.testem.app.prototype.exit">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>exit
+        <span class="apidocSignatureSpan">(err, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exit = function (err, cb) {
+  err = err || this.getExitCode();
+
+  if (this.exited) {
+    if (cb) {
+      cb(err);
+    }
+    return;
+  }
+  this.exited = true;
+  this.exitErr = err;
+
+  if (err) {
+    this.emit('testError', err);
+  } else {
+    this.emit('testFinish');
+  }
+
+  if (cb) {
+    cb(err);
+  }
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  __proto__: EventEmitter.prototype,
+  start: function(cb) {
+    log.info('Starting ' + this.config.appMode);
+    var self = this;
+
+    return Bluebird.using(SignalListeners.with(), function(signalListeners) {
+      signalListeners.on('signal', function(err) {
+self.<span class="apidocCodeKeywordSpan">exit</span>(err);
+      });
+
+      return Bluebird.using(Reporter.with(self, self.stdoutStream, self.reportFileName), function(reporter) {
+self.reporter = reporter;
+
+return Bluebird.using(self.fileWatch(), function() {
+  return Bluebird.using(self.getServer(), function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.fileWatch" id="apidoc.element.testem.app.prototype.fileWatch">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>fileWatch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fileWatch = function () {
+  return this.configureFileWatch().disposer(function() {
+    return;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      signalListeners.on('signal', function(err) {
+        self.exit(err);
+      });
+
+      return Bluebird.using(Reporter.with(self, self.stdoutStream, self.reportFileName), function(reporter) {
+        self.reporter = reporter;
+
+        return Bluebird.using(self.<span class="apidocCodeKeywordSpan">fileWatch</span>(), function() {
+          return Bluebird.using(self.getServer(), function() {
+            return Bluebird.using(self.getRunners(), function() {
+              return Bluebird.using(self.runHook('on_start'), function() {
+var w = self.waitForTests();
+
+if (cb) {
+  cb();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.getExitCode" id="apidoc.element.testem.app.prototype.getExitCode">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>getExitCode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getExitCode = function () {
+  if (!this.reporter) {
+    return new Error('Failed to initialize.');
+  }
+  if (!this.reporter.hasPassed()) {
+    var e = new Error('Not all tests passed.');
+    e.hideFromReporter = true;
+    return e;
+  }
+  if (!this.reporter.hasTests() &amp;&amp; this.config.get('fail_on_zero_tests')) {
+    return new Error('No tests found.');
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  self.reporter.report('testem', result);
+}).finally(function() {
+  self.reporter.onEnd('testem', { launcherId: 0 });
+});
+  },
+
+  exit: function(err, cb) {
+err = err || this.<span class="apidocCodeKeywordSpan">getExitCode</span>();
+
+if (this.exited) {
+  if (cb) {
+    cb(err);
+  }
+  return;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.getRunnerFactory" id="apidoc.element.testem.app.prototype.getRunnerFactory">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>getRunnerFactory
+        <span class="apidocSignatureSpan">(launcher)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRunnerFactory = function (launcher) {
+  var protocol = launcher.protocol();
+  switch (protocol) {
+    case 'process':
+      return ProcessTestRunner;
+    case 'browser':
+      return BrowserTestRunner;
+    case 'tap':
+      return TapProcessTestRunner;
+    default:
+      throw new Error('Don\'t know about ' + protocol + ' protocol.');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      throw new Error('Don\'t know about ' + protocol + ' protocol.');
+  }
+},
+
+createTestRunner: function(launcher, reporter) {
+  var singleRun = this.config.get('single_run');
+
+  return new (this.<span class="apidocCodeKeywordSpan">getRunnerFactory</span>(launcher))(launcher, reporter, this.runnerIndex++,
+singleRun, this.config);
+},
+
+withTestTimeout: function() {
+  return this.startClock().disposer(function() {
+    return this.cancelExistingTimeout();
+  }.bind(this));
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.getRunners" id="apidoc.element.testem.app.prototype.getRunners">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>getRunners
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRunners = function () {
+  var self = this;
+  return Bluebird.fromCallback(function(callback) {
+    self.createRunners(callback);
+  }).disposer(function() {
+    return self.killRunners();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      });
+
+      return Bluebird.using(Reporter.with(self, self.stdoutStream, self.reportFileName), function(reporter) {
+        self.reporter = reporter;
+
+        return Bluebird.using(self.fileWatch(), function() {
+          return Bluebird.using(self.getServer(), function() {
+            return Bluebird.using(self.<span class="apidocCodeKeywordSpan">getRunners</span>(), function() {
+              return Bluebird.using(self.runHook('on_start'), function() {
+var w = self.waitForTests();
+
+if (cb) {
+  cb();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.getServer" id="apidoc.element.testem.app.prototype.getServer">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>getServer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getServer = function () {
+  var self = this;
+  return this.startServer().disposer(function() {
+    return self.stopServer();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        self.exit(err);
+      });
+
+      return Bluebird.using(Reporter.with(self, self.stdoutStream, self.reportFileName), function(reporter) {
+        self.reporter = reporter;
+
+        return Bluebird.using(self.fileWatch(), function() {
+          return Bluebird.using(self.<span class="apidocCodeKeywordSpan">getServer</span>(), function() {
+            return Bluebird.using(self.getRunners(), function() {
+              return Bluebird.using(self.runHook('on_start'), function() {
+var w = self.waitForTests();
+
+if (cb) {
+  cb();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.killRunners" id="apidoc.element.testem.app.prototype.killRunners">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>killRunners
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">killRunners = function () {
+  return Bluebird.each(this.runners, function(runner) {
+    return runner.exit();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var self = this;
+
+    this.reporter.onStart('testem', { launcherId: 0 });
+
+    return Bluebird.using(self.runHook('before_tests'), function() {
+      return Bluebird.using(RunTimeout.with(self.config.get('timeout')), function(timeout) {
+timeout.on('timeout', function() {
+  self.<span class="apidocCodeKeywordSpan">killRunners</span>();
+});
+self.timeoutID = timeout.timeoutID; // TODO Remove, just for the tests
+self.currentRun = self.singleRun(timeout);
+self.emit('testRun');
+
+log.info('Tests running.');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.launchers" id="apidoc.element.testem.app.prototype.launchers">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>launchers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">launchers = function () {
+  return this.runners.map(function(runner) {
+    return runner.launcher;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.onBrowserLogin" id="apidoc.element.testem.app.prototype.onBrowserLogin">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>onBrowserLogin
+        <span class="apidocSignatureSpan">(browserName, id, socket)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onBrowserLogin = function (browserName, id, socket) {
+  var browser = find(this.runners, function(runner) {
+    return runner.launcherId === id &amp;&amp; (!runner.socket || !runner.socket.connected);
+  });
+
+  if (!browser) {
+    var launcher = new Launcher(browserName, {
+      id: id,
+      protocol: 'browser'
+    }, this.config);
+    browser = new BrowserTestRunner(launcher, this.reporter, this.runnerIndex++, this.config);
+    this.addRunner(browser);
+  }
+
+  browser.tryAttach(browserName, id, socket);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.onFileRequested" id="apidoc.element.testem.app.prototype.onFileRequested">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>onFileRequested
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onFileRequested = function (filepath) {
+  if (this.fileWatcher &amp;&amp; !this.config.get('serve_files')) {
+    this.fileWatcher.add(filepath);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.onServerError" id="apidoc.element.testem.app.prototype.onServerError">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>onServerError
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onServerError = function (err) {
+  this.exit(err);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.runHook" id="apidoc.element.testem.app.prototype.runHook">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>runHook
+        <span class="apidocSignatureSpan">(hook, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runHook = function (hook, data) {
+  return HookRunner.with(this.config, hook, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+      return Bluebird.using(Reporter.with(self, self.stdoutStream, self.reportFileName), function(reporter) {
+        self.reporter = reporter;
+
+        return Bluebird.using(self.fileWatch(), function() {
+          return Bluebird.using(self.getServer(), function() {
+            return Bluebird.using(self.getRunners(), function() {
+              return Bluebird.using(self.<span class="apidocCodeKeywordSpan">runHook</span>('on_start'), function() {
+var w = self.waitForTests();
+
+if (cb) {
+  cb();
+}
+
+return w;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.runTests" id="apidoc.element.testem.app.prototype.runTests">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>runTests
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runTests = function () {
+  if (this.paused) {
+    return Bluebird.resolve();
+  }
+
+  log.info('Running tests...');
+
+  var self = this;
+
+  this.reporter.onStart('testem', { launcherId: 0 });
+
+  return Bluebird.using(self.runHook('before_tests'), function() {
+    return Bluebird.using(RunTimeout.with(self.config.get('timeout')), function(timeout) {
+      timeout.on('timeout', function() {
+        self.killRunners();
+      });
+      self.timeoutID = timeout.timeoutID; // TODO Remove, just for the tests
+      self.currentRun = self.singleRun(timeout);
+      self.emit('testRun');
+
+      log.info('Tests running.');
+
+      return self.currentRun;
+    }).then(function() {
+      return Bluebird.using(self.runHook('after_tests'), function() {});
+    });
+  }).catch(function(err) {
+    if (err.hideFromReporter) {
+      return;
+    }
+
+    var result = {
+      failed: 1,
+      passed: 0,
+      name: 'testem',
+      launcherId: 0,
+      error: {
+        message: err.toString()
+      }
+    };
+
+    self.reporter.report('testem', result);
+  }).finally(function() {
+    self.reporter.onEnd('testem', { launcherId: 0 });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return;
+  }
+  self.restarting = true;
+
+  return this.stopCurrentRun().catch(self.exit.bind(this)).then(function() {
+    self.restarting = false;
+
+    return self.<span class="apidocCodeKeywordSpan">runTests</span>();
+  });
+},
+
+stopCurrentRun: function() {
+  if (!this.currentRun) {
+    return Bluebird.resolve();
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.singleRun" id="apidoc.element.testem.app.prototype.singleRun">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>singleRun
+        <span class="apidocSignatureSpan">(timeout)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">singleRun = function (timeout) {
+  var limit = this.config.get('parallel');
+
+  var options = {};
+
+  if (limit &amp;&amp; limit &gt;= 1) {
+    options.concurrency = parseInt(limit);
+  } else {
+    options.concurrency = Infinity;
+  }
+
+  return Bluebird.map(this.runners, function(runner) {
+    if (this.exited) {
+      var e = new Error('Run canceled.');
+      e.hideFromReporter = true;
+      return Bluebird.reject(e);
+    }
+    if (this.restarting) {
+      return Bluebird.resolve();
+    }
+    return timeout.try(function() {
+      return runner.start();
+    });
+  }.bind(this), options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    return Bluebird.using(self.runHook('before_tests'), function() {
+return Bluebird.using(RunTimeout.with(self.config.get('timeout')), function(timeout) {
+  timeout.on('timeout', function() {
+    self.killRunners();
+  });
+  self.timeoutID = timeout.timeoutID; // TODO Remove, just for the tests
+  self.currentRun = self.<span class="apidocCodeKeywordSpan">singleRun</span>(timeout);
+  self.emit('testRun');
+
+  log.info('Tests running.');
+
+  return self.currentRun;
+}).then(function() {
+  return Bluebird.using(self.runHook('after_tests'), function() {});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.start" id="apidoc.element.testem.app.prototype.start">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (cb) {
+  log.info('Starting ' + this.config.appMode);
+  var self = this;
+
+  return Bluebird.using(SignalListeners.with(), function(signalListeners) {
+    signalListeners.on('signal', function(err) {
+      self.exit(err);
+    });
+
+    return Bluebird.using(Reporter.with(self, self.stdoutStream, self.reportFileName), function(reporter) {
+      self.reporter = reporter;
+
+      return Bluebird.using(self.fileWatch(), function() {
+        return Bluebird.using(self.getServer(), function() {
+          return Bluebird.using(self.getRunners(), function() {
+            return Bluebird.using(self.runHook('on_start'), function() {
+              var w = self.waitForTests();
+
+              if (cb) {
+                cb();
+              }
+
+              return w;
+            }).then(function() {
+              log.info('Stopping ' + self.config.appMode);
+
+              self.emit('tests-finish');
+
+              return Bluebird.using(self.runHook('on_exit'), function() {});
+            });
+          });
+        });
+      });
+    });
+  }).asCallback(this.cleanExit);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+startServer: function(callback) {
+  log.info('Starting server');
+  this.server = new Server(this.config);
+  this.server.on('file-requested', this.onFileRequested.bind(this));
+  this.server.on('browser-login', this.onBrowserLogin.bind(this));
+  this.server.on('server-error', this.onServerError.bind(this));
+
+  return this.server.<span class="apidocCodeKeywordSpan">start</span>().asCallback(callback);
+},
+
+getServer: function() {
+  var self = this;
+  return this.startServer().disposer(function() {
+    return self.stopServer();
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.startServer" id="apidoc.element.testem.app.prototype.startServer">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>startServer
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startServer = function (callback) {
+  log.info('Starting server');
+  this.server = new Server(this.config);
+  this.server.on('file-requested', this.onFileRequested.bind(this));
+  this.server.on('browser-login', this.onBrowserLogin.bind(this));
+  this.server.on('server-error', this.onServerError.bind(this));
+
+  return this.server.start().asCallback(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.server.on('server-error', this.onServerError.bind(this));
+
+  return this.server.start().asCallback(callback);
+},
+
+getServer: function() {
+  var self = this;
+  return this.<span class="apidocCodeKeywordSpan">startServer</span>().disposer(function() {
+    return self.stopServer();
+  });
+},
+
+onFileRequested: function(filepath) {
+  if (this.fileWatcher &amp;&amp; !this.config.get('serve_files')) {
+    this.fileWatcher.add(filepath);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.stopCurrentRun" id="apidoc.element.testem.app.prototype.stopCurrentRun">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>stopCurrentRun
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopCurrentRun = function () {
+  if (!this.currentRun) {
+    return Bluebird.resolve();
+  }
+
+  return Bluebird.all([ this.stopRunners(), this.currentRun ]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var self = this;
+
+  if (self.restarting) {
+    return;
+  }
+  self.restarting = true;
+
+  return this.<span class="apidocCodeKeywordSpan">stopCurrentRun</span>().catch(self.exit.bind(this)).then(function() {
+    self.restarting = false;
+
+    return self.runTests();
+  });
+},
+
+stopCurrentRun: function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.stopRunners" id="apidoc.element.testem.app.prototype.stopRunners">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>stopRunners
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopRunners = function () {
+  return Bluebird.each(this.runners, function(runner) {
+    if (typeof runner.stop === 'function') {
+      return runner.stop();
+    }
+
+    return runner.exit();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+stopCurrentRun: function() {
+  if (!this.currentRun) {
+    return Bluebird.resolve();
+  }
+
+  return Bluebird.all([ this.<span class="apidocCodeKeywordSpan">stopRunners</span>(), this.currentRun ]);
+},
+
+runTests: function() {
+  if (this.paused) {
+    return Bluebird.resolve();
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.stopServer" id="apidoc.element.testem.app.prototype.stopServer">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>stopServer
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopServer = function (callback) {
+  if (!this.server) {
+    return Bluebird.resolve().asCallback(callback);
+  }
+
+  return this.server.stop().asCallback(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  return this.server.start().asCallback(callback);
+},
+
+getServer: function() {
+  var self = this;
+  return this.startServer().disposer(function() {
+    return self.<span class="apidocCodeKeywordSpan">stopServer</span>();
+  });
+},
+
+onFileRequested: function(filepath) {
+  if (this.fileWatcher &amp;&amp; !this.config.get('serve_files')) {
+    this.fileWatcher.add(filepath);
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.triggerRun" id="apidoc.element.testem.app.prototype.triggerRun">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>triggerRun
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">triggerRun = function (src) {
+  log.info(src + ' triggered test run.');
+  var self = this;
+
+  if (self.restarting) {
+    return;
+  }
+  self.restarting = true;
+
+  return this.stopCurrentRun().catch(self.exit.bind(this)).then(function() {
+    self.restarting = false;
+
+    return self.runTests();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+log.info('Waiting for tests.');
+
+var self = this;
+if (this.exited) {
+  return Bluebird.reject(this.exitErr || new Error('Testem exited before running any tests.'));
+}
+
+var run = this.<span class="apidocCodeKeywordSpan">triggerRun</span>('Start');
+
+if (self.config.get('single_run')) {
+  run.then(function() {
+    self.exit();
+  });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.waitForTests" id="apidoc.element.testem.app.prototype.waitForTests">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>waitForTests
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">waitForTests = function () {
+  log.info('Waiting for tests.');
+
+  var self = this;
+  if (this.exited) {
+    return Bluebird.reject(this.exitErr || new Error('Testem exited before running any tests.'));
+  }
+
+  var run = this.triggerRun('Start');
+
+  if (self.config.get('single_run')) {
+    run.then(function() {
+      self.exit();
+    });
+  }
+
+  return new Bluebird.Promise(function(resolve, reject) {
+    self.on('testFinish', resolve);
+    self.on('testError', reject);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return Bluebird.using(Reporter.with(self, self.stdoutStream, self.reportFileName), function(reporter) {
+        self.reporter = reporter;
+
+        return Bluebird.using(self.fileWatch(), function() {
+          return Bluebird.using(self.getServer(), function() {
+            return Bluebird.using(self.getRunners(), function() {
+return Bluebird.using(self.runHook('on_start'), function() {
+  var w = self.<span class="apidocCodeKeywordSpan">waitForTests</span>();
+
+  if (cb) {
+    cb();
+  }
+
+  return w;
+}).then(function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.withTestTimeout" id="apidoc.element.testem.app.prototype.withTestTimeout">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>withTestTimeout
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withTestTimeout = function () {
+  return this.startClock().disposer(function() {
+    return this.cancelExistingTimeout();
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.app.prototype.wrapUp" id="apidoc.element.testem.app.prototype.wrapUp">
+        function <span class="apidocSignatureSpan">testem.app.prototype.</span>wrapUp
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wrapUp = function (err) {
+  this.exit(err);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.browser_launcher" id="apidoc.module.testem.browser_launcher">module testem.browser_launcher</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.browser_launcher.getAvailableBrowsers" id="apidoc.element.testem.browser_launcher.getAvailableBrowsers">
+        function <span class="apidocSignatureSpan">testem.browser_launcher.</span>getAvailableBrowsers
+        <span class="apidocSignatureSpan">(config, browsers, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getAvailableBrowsers(config, browsers, cb) {
+  browsers.forEach(function(b) {
+    b.protocol = 'browser';
+  });
+
+  return Bluebird.filter(browsers, function(browser) {
+    return isInstalled(browser).then(function(result) {
+      if (!result) {
+        return false;
+      }
+
+      browser.exe = result;
+      return true;
+    });
+  }).asCallback(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return !this.get('src_files') &amp;&amp; !this.get('test_page');
+};
+
+Config.prototype.getAvailableLaunchers = function(cb) {
+  var self = this;
+
+  var browsers = knownBrowsers(process.platform, self);
+  browser_launcher.<span class="apidocCodeKeywordSpan">getAvailableBrowsers</span>(self, browsers, function(err, availableBrowsers
+) {
+if (err) {
+  return cb(err);
+}
+
+var availableLaunchers = {};
+availableBrowsers.forEach(function(browser) {
+  var newLauncher = new LauncherFactory(browser.name, browser, self);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.config" id="apidoc.module.testem.config">module testem.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.config" id="apidoc.element.testem.config.config">
+        function <span class="apidocSignatureSpan">testem.</span>config
+        <span class="apidocSignatureSpan">(appMode, progOptions, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Config(appMode, progOptions, config) {
+  this.appMode = appMode;
+  this.progOptions = progOptions || {};
+  this.fileOptions = {};
+  this.config = config || {};
+  this.getters = {
+    test_page: 'getTestPage'
+  };
+
+  if (appMode === 'dev') {
+    this.progOptions.reporter = 'dev';
+    this.progOptions.parallel = -1;
+  }
+
+  if (this.progOptions.debug === true) {
+    this.progOptions.debug = 'testem.log';
+  }
+
+  if (appMode === 'ci') {
+    this.progOptions.disable_watching = true;
+    this.progOptions.single_run = true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.config.prototype" id="apidoc.module.testem.config.prototype">module testem.config.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.cwd" id="apidoc.element.testem.config.prototype.cwd">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>cwd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cwd = function () {
+  return this.get('cwd') || process.cwd();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.fileWatcher.on('fileChanged', function(filepath) {
+log.info(filepath + ' changed (' + (this.disableFileWatch ? 'disabled' : 'enabled') + ').'
+;);
+if (this.disableFileWatch || this.paused) {
+  return;
+}
+var configFile = this.config.get('file');
+if ((configFile &amp;&amp; filepath === Path.resolve(configFile)) ||
+  (this.config.isCwdMode() &amp;&amp; filepath === process.<span class="apidocCodeKeywordSpan">cwd</span>())) {
+  // config changed
+  this.configure(function() {
+    this.triggerRun('Config changed');
+  }.bind(this));
+} else {
+  Bluebird.using(this.runHook('on_change', {file: filepath}), function() {
+    this.triggerRun('File changed: ' + filepath);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.get" id="apidoc.element.testem.config.prototype.get">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>get
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (key) {
+  var getterKey = this.getters[key];
+  var getter = getterKey &amp;&amp; this[getterKey];
+  if (getter) {
+    return getter.call(this, key);
+  } else {
+    return this.getConfigProperty(key);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Reporter = require('./utils/reporter');
+var SignalListeners = require('./utils/signal-listeners');
+
+function App(config, finalizer) {
+this.exited = false;
+this.paused = false;
+this.config = config;
+this.stdoutStream = config.<span class="apidocCodeKeywordSpan">get</span>('stdout_stream') || process.stdout;
+this.server = new Server(this.config);
+this.results = [];
+this.runnerIndex = 0;
+this.runners = [];
+this.timeoutID = undefined;
+
+this.reportFileName = this.config.get('report_file');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getAllOptions" id="apidoc.element.testem.config.prototype.getAllOptions">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getAllOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAllOptions = function () {
+  var options = [];
+  function getOptions(o) {
+    if (!o) {
+      return;
+    }
+    if (o.options) {
+      o.options.forEach(function(o) {
+        options.push(o.name());
+      });
+    }
+    getOptions(o.parent);
+  }
+  getOptions(this.progOptions);
+  return options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+getOptions(this.progOptions);
+return options;
+};
+
+Config.prototype.getTemplateData = function(cb) {
+var ret = {};
+var options = this.<span class="apidocCodeKeywordSpan">getAllOptions</span>();
+var key;
+for (key in this.progOptions) {
+  if (options.indexOf(key) !== -1) {
+    ret[key] = this.progOptions[key];
+  }
+}
+for (key in this.fileOptions) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getAvailableLaunchers" id="apidoc.element.testem.config.prototype.getAvailableLaunchers">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getAvailableLaunchers
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAvailableLaunchers = function (cb) {
+  var self = this;
+
+  var browsers = knownBrowsers(process.platform, self);
+  browser_launcher.getAvailableBrowsers(self, browsers, function(err, availableBrowsers) {
+    if (err) {
+      return cb(err);
+    }
+
+    var availableLaunchers = {};
+    availableBrowsers.forEach(function(browser) {
+      var newLauncher = new LauncherFactory(browser.name, browser, self);
+      availableLaunchers[browser.name.toLowerCase()] = newLauncher;
+    });
+
+    // add custom launchers
+    var customLaunchers = self.get('launchers');
+    if (customLaunchers) {
+      for (var name in customLaunchers) {
+        var newLauncher = new LauncherFactory(name, customLaunchers[name], self);
+        availableLaunchers[name.toLowerCase()] = newLauncher;
+      }
+    }
+    cb(null, availableLaunchers);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    cb(null, availableLaunchers);
+  });
+};
+
+Config.prototype.getLaunchers = function(cb) {
+  var self = this;
+  this.<span class="apidocCodeKeywordSpan">getAvailableLaunchers</span>(function(err, availableLaunchers) {
+    if (err) {
+      return cb(err);
+    }
+
+    self.getWantedLaunchers(availableLaunchers, cb);
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getCSSFiles" id="apidoc.element.testem.config.prototype.getCSSFiles">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getCSSFiles
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCSSFiles = function (callback) {
+  var want = this.get('css_files') || '';
+  this.getFileSet(want, '', callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.getServeFiles(function(err, files) {
+    var replaceSlashes = function(f) {
+      return {src: f.src.replace(/\\/g, '/'), attrs: f.attrs};
+    };
+
+    ret.serve_files = files.map(replaceSlashes);
+
+    this.<span class="apidocCodeKeywordSpan">getCSSFiles</span>(function(err, files) {
+      ret.css_files = files.map(replaceSlashes);
+      if (cb) {
+        cb(err, ret);
+      }
+    });
+  }.bind(this));
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getConfigProperty" id="apidoc.element.testem.config.prototype.getConfigProperty">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getConfigProperty
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConfigProperty = function (key) {
+  if (this.config &amp;&amp; key in this.config) {
+    return this.config[key];
+  }
+  if (key in this.progOptions &amp;&amp; typeof this.progOptions[key] !== 'undefined') {
+    return this.progOptions[key];
+  }
+  if (key in this.fileOptions &amp;&amp; typeof this.fileOptions[key] !== 'undefined') {
+    return this.fileOptions[key];
+  }
+  if (key in this.defaults) {
+    var defaultVal = this.defaults[key];
+    if (typeof defaultVal === 'function') {
+      return defaultVal.call(this);
+    } else {
+      return defaultVal;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                  .replace(/\=&amp;/g, '&amp;')
+                  .replace(/=$/, '');
+urlObj.path = urlObj.pathname + urlObj.search;
+return url.format(urlObj);
+};
+
+Config.prototype.getTestPage = function() {
+var testPage = this.<span class="apidocCodeKeywordSpan">getConfigProperty</span>('test_page');
+var queryParams = this.getConfigProperty('query_params');
+var self = this;
+
+if (!Array.isArray(testPage)) {
+  testPage = [testPage];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getFileSet" id="apidoc.element.testem.config.prototype.getFileSet">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getFileSet
+        <span class="apidocSignatureSpan">(want, dontWant, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFileSet = function (want, dontWant, callback) {
+  var self = this;
+  if (isa(want, String)) {
+    want = [want]; // want is an Array
+  }
+  if (isa(dontWant, String)) {
+    dontWant = [dontWant]; // dontWant is an Array
+  }
+
+  // Filter glob &lt; 6 negation patterns to still support them
+  // See https://github.com/isaacs/node-glob/tree/3f883c43#comments-and-negation
+  var positiveWants = [];
+  want.forEach(function(patternEntry) {
+    var pattern = isa(patternEntry, String) ? patternEntry : patternEntry.src;
+    if (pattern.indexOf('!') === 0) {
+      return dontWant.push(pattern.substring(1));
+    }
+
+    positiveWants.push(patternEntry);
+  });
+
+  dontWant = dontWant.map(function(p) {
+    return p ? self.resolvePath(p) : p;
+  });
+  Bluebird.reduce(positiveWants, function(allThatIWant, patternEntry) {
+    var pattern = isa(patternEntry, String) ? patternEntry : patternEntry.src;
+    var attrs = patternEntry.attrs || [];
+    var patternUrl = url.parse(pattern);
+
+    if (patternUrl.protocol === 'file:') {
+      pattern = patternUrl.hostname + patternUrl.path;
+    } else if (patternUrl.protocol) {
+      return allThatIWant.concat({src: pattern, attrs: attrs});
+    }
+
+    return globAsync(self.resolvePath(pattern), { ignore: dontWant }).then(function(files) {
+      return allThatIWant.concat(files.map(function(f) {
+        f = self.reverseResolvePath(f);
+        return {src: f, attrs: attrs};
+      }));
+    });
+  }, []).asCallback(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+  }, []).asCallback(callback);
+};
+
+Config.prototype.getSrcFiles = function(callback) {
+  var srcFiles = this.get('src_files') || '*.js';
+  var srcFilesIgnore = this.get('src_files_ignore') || '';
+  this.<span class="apidocCodeKeywordSpan">getFileSet</span>(srcFiles, srcFilesIgnore, callback);
+};
+
+Config.prototype.getServeFiles = function(callback) {
+  var want = this.get('serve_files') || this.get('src_files') || '*.js';
+  var dontWant = this.get('serve_files_ignore') || this.get('src_files_ignore') || '';
+  this.getFileSet(want, dontWant, callback);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getHomeDir" id="apidoc.element.testem.config.prototype.getHomeDir">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getHomeDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHomeDir = function () {
+  return process.env.HOME || process.env.USERPROFILE;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getLaunchers" id="apidoc.element.testem.config.prototype.getLaunchers">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getLaunchers
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLaunchers = function (cb) {
+  var self = this;
+  this.getAvailableLaunchers(function(err, availableLaunchers) {
+    if (err) {
+      return cb(err);
+    }
+
+    self.getWantedLaunchers(availableLaunchers, cb);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return self.killRunners();
+    });
+  },
+
+  createRunners: function(callback) {
+    var self = this;
+    var reporter = this.reporter;
+    this.config.<span class="apidocCodeKeywordSpan">getLaunchers</span>(function(err, launchers) {
+if (err) {
+  return callback(err);
+}
+
+var testPages = self.config.get('test_page');
+launchers.forEach(function(launcher) {
+  for (var i = 0; i &lt; testPages.length; i++) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getServeFiles" id="apidoc.element.testem.config.prototype.getServeFiles">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getServeFiles
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getServeFiles = function (callback) {
+  var want = this.get('serve_files') || this.get('src_files') || '*.js';
+  var dontWant = this.get('serve_files_ignore') || this.get('src_files_ignore') || '';
+  this.getFileSet(want, dontWant, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  for (key in this.fileOptions) {
+ret[key] = this.fileOptions[key];
+  }
+  for (key in this.config) {
+ret[key] = this.config[key];
+  }
+  this.<span class="apidocCodeKeywordSpan">getServeFiles</span>(function(err, files) {
+var replaceSlashes = function(f) {
+  return {src: f.src.replace(/\\/g, '/'), attrs: f.attrs};
+};
+
+ret.serve_files = files.map(replaceSlashes);
+
+this.getCSSFiles(function(err, files) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getSrcFiles" id="apidoc.element.testem.config.prototype.getSrcFiles">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getSrcFiles
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSrcFiles = function (callback) {
+  var srcFiles = this.get('src_files') || '*.js';
+  var srcFilesIgnore = this.get('src_files_ignore') || '';
+  this.getFileSet(srcFiles, srcFilesIgnore, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getTemplateData" id="apidoc.element.testem.config.prototype.getTemplateData">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getTemplateData
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTemplateData = function (cb) {
+  var ret = {};
+  var options = this.getAllOptions();
+  var key;
+  for (key in this.progOptions) {
+    if (options.indexOf(key) !== -1) {
+      ret[key] = this.progOptions[key];
+    }
+  }
+  for (key in this.fileOptions) {
+    ret[key] = this.fileOptions[key];
+  }
+  for (key in this.config) {
+    ret[key] = this.config[key];
+  }
+  this.getServeFiles(function(err, files) {
+    var replaceSlashes = function(f) {
+      return {src: f.src.replace(/\\/g, '/'), attrs: f.attrs};
+    };
+
+    ret.serve_files = files.map(replaceSlashes);
+
+    this.getCSSFiles(function(err, files) {
+      ret.css_files = files.map(replaceSlashes);
+      if (cb) {
+        cb(err, ret);
+      }
+    });
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getTestPage" id="apidoc.element.testem.config.prototype.getTestPage">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getTestPage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTestPage = function () {
+  var testPage = this.getConfigProperty('test_page');
+  var queryParams = this.getConfigProperty('query_params');
+  var self = this;
+
+  if (!Array.isArray(testPage)) {
+    testPage = [testPage];
+  }
+
+  return testPage.map(function(page) {
+    return self.mergeUrlAndQueryParams(page, queryParams);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getUserDataDir" id="apidoc.element.testem.config.prototype.getUserDataDir">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getUserDataDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUserDataDir = function () {
+  if (this.get('user_data_dir')) {
+    return path.resolve(this.cwd(), this.get('user_data_dir'));
+  }
+
+  return os.tmpdir();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        testPage: this.settings.test_page || '',
+        id: this.getId()
+      };
+      return template(thing, params);
+    }
+  },
+  browserTmpDir: function() {
+    var userDataDir = this.config.<span class="apidocCodeKeywordSpan">getUserDataDir</span>();
+
+    return path.join(userDataDir, 'testem-' + this.id);
+  }
+};
+
+module.exports = Launcher;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getWantedLauncherNames" id="apidoc.element.testem.config.prototype.getWantedLauncherNames">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getWantedLauncherNames
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWantedLauncherNames = function (available) {
+  var launchers = this.get('launch');
+  if (launchers) {
+    launchers = launchers.toLowerCase().split(',');
+  } else if (this.appMode === 'dev') {
+    launchers = this.get('launch_in_dev') || [];
+  } else {
+    launchers = this.get('launch_in_ci') || Object.keys(available);
+  }
+
+  var skip = this.get('skip');
+  if (skip) {
+    skip = skip.toLowerCase().split(',');
+    launchers = launchers.filter(function(name) {
+      return skip.indexOf(name) === -1;
+    });
+  }
+  return launchers;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+}
+return launchers;
+};
+
+Config.prototype.getWantedLaunchers = function(available, cb) {
+var launchers = [];
+var wanted = this.<span class="apidocCodeKeywordSpan">getWantedLauncherNames</span>(available);
+var self = this;
+var err = null;
+
+wanted.forEach(function(name) {
+  var launcher = available[name.toLowerCase()];
+  if (!launcher) {
+    if (self.appMode === 'dev' || self.get('ignore_missing_launchers')) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.getWantedLaunchers" id="apidoc.element.testem.config.prototype.getWantedLaunchers">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>getWantedLaunchers
+        <span class="apidocSignatureSpan">(available, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWantedLaunchers = function (available, cb) {
+  var launchers = [];
+  var wanted = this.getWantedLauncherNames(available);
+  var self = this;
+  var err = null;
+
+  wanted.forEach(function(name) {
+    var launcher = available[name.toLowerCase()];
+    if (!launcher) {
+      if (self.appMode === 'dev' || self.get('ignore_missing_launchers')) {
+        log.warn('Launcher "' + name + '" is not recognized.');
+      } else {
+        err = new Error('Launcher ' + name + ' not found. Not installed?');
+      }
+    } else {
+      launchers.push(launcher);
+    }
+  });
+  cb(err, launchers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Config.prototype.getLaunchers = function(cb) {
+var self = this;
+this.getAvailableLaunchers(function(err, availableLaunchers) {
+  if (err) {
+    return cb(err);
+  }
+
+  self.<span class="apidocCodeKeywordSpan">getWantedLaunchers</span>(availableLaunchers, cb);
+});
+};
+
+Config.prototype.getWantedLauncherNames = function(available) {
+var launchers = this.get('launch');
+if (launchers) {
+  launchers = launchers.toLowerCase().split(',');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.isCwdMode" id="apidoc.element.testem.config.prototype.isCwdMode">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>isCwdMode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isCwdMode = function () {
+  return !this.get('src_files') &amp;&amp; !this.get('test_page');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.fileWatcher.on('fileChanged', function(filepath) {
+log.info(filepath + ' changed (' + (this.disableFileWatch ? 'disabled' : 'enabled') + ').'
+;);
+if (this.disableFileWatch || this.paused) {
+  return;
+}
+var configFile = this.config.get('file');
+if ((configFile &amp;&amp; filepath === Path.resolve(configFile)) ||
+  (this.config.<span class="apidocCodeKeywordSpan">isCwdMode</span>() &amp;&amp; filepath === process.cwd())) {
+  // config changed
+  this.configure(function() {
+    this.triggerRun('Config changed');
+  }.bind(this));
+} else {
+  Bluebird.using(this.runHook('on_change', {file: filepath}), function() {
+    this.triggerRun('File changed: ' + filepath);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.mergeUrlAndQueryParams" id="apidoc.element.testem.config.prototype.mergeUrlAndQueryParams">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>mergeUrlAndQueryParams
+        <span class="apidocSignatureSpan">(urlString, queryParamsObj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeUrlAndQueryParams = function (urlString, queryParamsObj) {
+  if (!queryParamsObj) {
+    return urlString;
+  }
+
+  if (typeof queryParamsObj === 'string') {
+    if (queryParamsObj[0] === '?') {
+      queryParamsObj = queryParamsObj.substr(1);
+    }
+    queryParamsObj = querystring.parse(queryParamsObj);
+  }
+
+  var urlObj = url.parse(urlString);
+  var outputQueryParams = querystring.parse(urlObj.query) || {};
+  Object.keys(queryParamsObj).forEach(function(param) {
+    outputQueryParams[param] = queryParamsObj[param];
+  });
+  urlObj.query = outputQueryParams;
+  urlObj.search = querystring.stringify(outputQueryParams)
+                    .replace(/\=&amp;/g, '&amp;')
+                    .replace(/=$/, '');
+  urlObj.path = urlObj.pathname + urlObj.search;
+  return url.format(urlObj);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var self = this;
+
+if (!Array.isArray(testPage)) {
+  testPage = [testPage];
+}
+
+return testPage.map(function(page) {
+  return self.<span class="apidocCodeKeywordSpan">mergeUrlAndQueryParams</span>(page, queryParams);
+});
+};
+
+Config.prototype.getConfigProperty = function(key) {
+if (this.config &amp;&amp; key in this.config) {
+  return this.config[key];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.printLauncherInfo" id="apidoc.element.testem.config.prototype.printLauncherInfo">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>printLauncherInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printLauncherInfo = function () {
+  var self = this;
+  this.getAvailableLaunchers(function(err, launchers) {
+    var launch_in_dev = (self.get('launch_in_dev') || [])
+      .map(function(s) {return s.toLowerCase();});
+    var launch_in_ci = self.get('launch_in_ci');
+    if (launch_in_ci) {
+      launch_in_ci = launch_in_ci.map(function(s) {return s.toLowerCase();});
+    }
+    launchers = Object.keys(launchers).map(function(k) {return launchers[k];});
+    console.log('Have ' + launchers.length + ' launchers available; auto-launch info displayed on the right.');
+    console.log(); // newline
+    console.log('Launcher      Type          CI  Dev');
+    console.log('------------  ------------  --  ---');
+    console.log(launchers.map(function(launcher) {
+      var protocol = launcher.settings.protocol;
+      var kind = protocol === 'browser' ?
+        'browser' : (
+          protocol === 'tap' ?
+            'process(TAP)' : 'process');
+      var dev = launch_in_dev.indexOf(launcher.name.toLowerCase()) !== -1 ?
+        Chars.mark :
+        ' ';
+      var ci = !launch_in_ci || launch_in_ci.indexOf(launcher.name.toLowerCase()) !== -1 ?
+        Chars.mark :
+        ' ';
+      return (pad(launcher.name, 14, ' ', 1) +
+        pad(kind, 12, ' ', 1) +
+        '  ' + ci + '    ' + dev + '      ');
+    }).join('\n'));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+main();
+function main() {
+program.parse(process.argv);
+
+var config = new Config(appMode, progOptions);
+if (appMode === 'launchers') {
+  config.read(function() {
+    config.<span class="apidocCodeKeywordSpan">printLauncherInfo</span>();
+  });
+} else {
+  var api = new Api();
+  if (appMode === 'ci') {
+    api.startCI(progOptions);
+  } else if (appMode === 'dev') {
+    api.startDev(progOptions);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.read" id="apidoc.element.testem.config.prototype.read">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>read
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (callback) {
+  var configFile = this.progOptions.file;
+
+  if (configFile) {
+    this.readConfigFile(configFile, callback);
+  } else {
+    log.info('Seeking for config file...');
+
+    // Try all testem.json, testem.yml and testem.js
+    // testem.json gets precedence
+    var files = ['testem.json', '.testem.json', '.testem.yml', 'testem.yml', 'testem.js', '.testem.js'];
+    return Bluebird.filter(files.map(this.resolveConfigPath.bind(this)), fileExists).then(function(matched) {
+      var configFile = matched[0];
+      if (configFile) {
+        this.readConfigFile(configFile, callback);
+      } else {
+        if (callback) {
+          callback.call(this);
+        }
+      }
+    }.bind(this));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+main();
+function main() {
+program.parse(process.argv);
+
+var config = new Config(appMode, progOptions);
+if (appMode === 'launchers') {
+  config.<span class="apidocCodeKeywordSpan">read</span>(function() {
+    config.printLauncherInfo();
+  });
+} else {
+  var api = new Api();
+  if (appMode === 'ci') {
+    api.startCI(progOptions);
+  } else if (appMode === 'dev') {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.readConfigFile" id="apidoc.element.testem.config.prototype.readConfigFile">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>readConfigFile
+        <span class="apidocSignatureSpan">(configFile, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readConfigFile = function (configFile, callback) {
+  var self = this;
+  if (!configFile) { // allow empty configFile for programmatic setups
+    if (callback) {
+      callback.call(self);
+    }
+  } else if (configFile.match(/\.js$/)) {
+    this.readJS(configFile, callback);
+  } else if (configFile.match(/\.json$/)) {
+    this.readJSON(configFile, callback);
+  } else if (configFile.match(/\.yml$/)) {
+    this.readYAML(configFile, callback);
+  } else {
+    log.error('Unrecognized config file format for ' + configFile);
+    if (callback) {
+      callback.call(self);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}
+
+Config.prototype.read = function(callback) {
+  var configFile = this.progOptions.file;
+
+  if (configFile) {
+this.<span class="apidocCodeKeywordSpan">readConfigFile</span>(configFile, callback);
+  } else {
+log.info('Seeking for config file...');
+
+// Try all testem.json, testem.yml and testem.js
+// testem.json gets precedence
+var files = ['testem.json', '.testem.json', '.testem.yml', 'testem.yml', 'testem.js
+', '.testem.js'];
+return Bluebird.filter(files.map(this.resolveConfigPath.bind(this)), fileExists).then(function(matched) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.readJS" id="apidoc.element.testem.config.prototype.readJS">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>readJS
+        <span class="apidocSignatureSpan">(configFile, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readJS = function (configFile, callback) {
+  this.fileOptions = require(this.resolveConfigPath(configFile));
+  if (callback) {
+    callback.call(this);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Config.prototype.readConfigFile = function(configFile, callback) {
+var self = this;
+if (!configFile) { // allow empty configFile for programmatic setups
+  if (callback) {
+    callback.call(self);
+  }
+} else if (configFile.match(/\.js$/)) {
+  this.<span class="apidocCodeKeywordSpan">readJS</span>(configFile, callback);
+} else if (configFile.match(/\.json$/)) {
+  this.readJSON(configFile, callback);
+} else if (configFile.match(/\.yml$/)) {
+  this.readYAML(configFile, callback);
+} else {
+  log.error('Unrecognized config file format for ' + configFile);
+  if (callback) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.readJSON" id="apidoc.element.testem.config.prototype.readJSON">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>readJSON
+        <span class="apidocSignatureSpan">(configFile, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readJSON = function (configFile, callback) {
+  var self = this;
+  fs.readFile(configFile, function(err, data) {
+    if (!err) {
+      var cfg = JSON.parse(data.toString());
+      self.fileOptions = cfg;
+      self.progOptions.file = configFile;
+    }
+    if (callback) {
+      callback.call(self);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!configFile) { // allow empty configFile for programmatic setups
+  if (callback) {
+    callback.call(self);
+  }
+} else if (configFile.match(/\.js$/)) {
+  this.readJS(configFile, callback);
+} else if (configFile.match(/\.json$/)) {
+  this.<span class="apidocCodeKeywordSpan">readJSON</span>(configFile, callback);
+} else if (configFile.match(/\.yml$/)) {
+  this.readYAML(configFile, callback);
+} else {
+  log.error('Unrecognized config file format for ' + configFile);
+  if (callback) {
+    callback.call(self);
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.readYAML" id="apidoc.element.testem.config.prototype.readYAML">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>readYAML
+        <span class="apidocSignatureSpan">(configFile, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readYAML = function (configFile, callback) {
+  var self = this;
+  fs.readFile(configFile, function(err, data) {
+    if (!err) {
+      var cfg = yaml.load(String(data));
+      self.fileOptions = cfg;
+    }
+    if (callback) {
+      callback.call(self);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      callback.call(self);
+    }
+  } else if (configFile.match(/\.js$/)) {
+    this.readJS(configFile, callback);
+  } else if (configFile.match(/\.json$/)) {
+    this.readJSON(configFile, callback);
+  } else if (configFile.match(/\.yml$/)) {
+    this.<span class="apidocCodeKeywordSpan">readYAML</span>(configFile, callback);
+  } else {
+    log.error('Unrecognized config file format for ' + configFile);
+    if (callback) {
+      callback.call(self);
+    }
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.resolveConfigPath" id="apidoc.element.testem.config.prototype.resolveConfigPath">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>resolveConfigPath
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolveConfigPath = function (filepath) {
+  if (this.progOptions.config_dir) {
+    return path.resolve(this.progOptions.config_dir, filepath);
+  } else {
+    return this.resolvePath(filepath);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (callback) {
+    callback.call(self);
+  }
+}
+};
+
+Config.prototype.readJS = function(configFile, callback) {
+this.fileOptions = require(this.<span class="apidocCodeKeywordSpan">resolveConfigPath</span>(configFile));
+if (callback) {
+  callback.call(this);
+}
+};
+
+Config.prototype.readYAML = function(configFile, callback) {
+var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.resolvePath" id="apidoc.element.testem.config.prototype.resolvePath">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>resolvePath
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolvePath = function (filepath) {
+  if (filepath[0] === '/') {
+    return filepath;
+  }
+
+  return path.resolve(this.cwd(), filepath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return path.resolve(this.cwd(), filepath);
+};
+
+Config.prototype.resolveConfigPath = function(filepath) {
+  if (this.progOptions.config_dir) {
+    return path.resolve(this.progOptions.config_dir, filepath);
+  } else {
+    return this.<span class="apidocCodeKeywordSpan">resolvePath</span>(filepath);
+  }
+};
+
+Config.prototype.reverseResolvePath = function(filepath) {
+  return path.relative(this.cwd(), filepath);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.reverseResolvePath" id="apidoc.element.testem.config.prototype.reverseResolvePath">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>reverseResolvePath
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reverseResolvePath = function (filepath) {
+  return path.relative(this.cwd(), filepath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      pattern = patternUrl.hostname + patternUrl.path;
+    } else if (patternUrl.protocol) {
+      return allThatIWant.concat({src: pattern, attrs: attrs});
+    }
+
+    return globAsync(self.resolvePath(pattern), { ignore: dontWant }).then(function(files) {
+      return allThatIWant.concat(files.map(function(f) {
+        f = self.<span class="apidocCodeKeywordSpan">reverseResolvePath</span>(f);
+        return {src: f, attrs: attrs};
+      }));
+    });
+  }, []).asCallback(callback);
+};
+
+Config.prototype.getSrcFiles = function(callback) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.config.prototype.set" id="apidoc.element.testem.config.prototype.set">
+        function <span class="apidocSignatureSpan">testem.config.prototype.</span>set
+        <span class="apidocSignatureSpan">(key, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (key, value) {
+  if (!this.config) {
+    this.config = {};
+  }
+  this.config[key] = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.displayutils" id="apidoc.module.testem.displayutils">module testem.displayutils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.displayutils.resultString" id="apidoc.element.testem.displayutils.resultString">
+        function <span class="apidocSignatureSpan">testem.displayutils.</span>resultString
+        <span class="apidocSignatureSpan">(id, prefix, result)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resultString(id, prefix, result) {
+  var string = resultDisplay(id, prefix, result) + '\n';
+  if (result.error || result.logs &amp;&amp; result.logs.length) {
+    string += yamlDisplay(result.error, result.logs) + '\n';
+  }
+  return string;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.file_watcher" id="apidoc.module.testem.file_watcher">module testem.file_watcher</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.file_watcher.file_watcher" id="apidoc.element.testem.file_watcher.file_watcher">
+        function <span class="apidocSignatureSpan">testem.</span>file_watcher
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">file_watcher = function (config) {
+  this.fileWatcher = fireworm('./', {
+    ignoreInitial: true,
+    skipDirEntryPatterns: []
+  });
+  var onFileChanged = this.onFileChanged.bind(this);
+  this.fileWatcher.on('change', onFileChanged);
+  this.fileWatcher.on('add', onFileChanged);
+  this.fileWatcher.on('remove', onFileChanged);
+  this.fileWatcher.on('emfile', this.onEMFILE.bind(this));
+
+  var watchFiles = config.get('watch_files');
+  this.fileWatcher.clear();
+  var confFile = config.get('file');
+  if (confFile) {
+    this.fileWatcher.add(confFile);
+  }
+  if (config.isCwdMode()) {
+    this.fileWatcher.add('*.js');
+  }
+  if (watchFiles) {
+    this.fileWatcher.add(watchFiles);
+  }
+  var srcFiles = config.get('src_files') || '*.js';
+  this.fileWatcher.add(srcFiles);
+  var ignoreFiles = config.get('src_files_ignore');
+  if (ignoreFiles) {
+    this.fileWatcher.ignore(ignoreFiles);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.file_watcher.prototype" id="apidoc.module.testem.file_watcher.prototype">module testem.file_watcher.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.file_watcher.prototype.add" id="apidoc.element.testem.file_watcher.prototype.add">
+        function <span class="apidocSignatureSpan">testem.file_watcher.prototype.</span>add
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (file) {
+  this.fileWatcher.add(file);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return this.startServer().disposer(function() {
+    return self.stopServer();
+  });
+},
+
+onFileRequested: function(filepath) {
+  if (this.fileWatcher &amp;&amp; !this.config.get('serve_files')) {
+    this.fileWatcher.<span class="apidocCodeKeywordSpan">add</span>(filepath);
+  }
+},
+
+onServerError: function(err) {
+  this.exit(err);
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.file_watcher.prototype.onEMFILE" id="apidoc.element.testem.file_watcher.prototype.onEMFILE">
+        function <span class="apidocSignatureSpan">testem.file_watcher.prototype.</span>onEMFILE
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onEMFILE = function () {
+  this.emit('EMFILE');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.file_watcher.prototype.onFileChanged" id="apidoc.element.testem.file_watcher.prototype.onFileChanged">
+        function <span class="apidocSignatureSpan">testem.file_watcher.prototype.</span>onFileChanged
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onFileChanged = function (filePath) {
+  this.emit('fileChanged', filePath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.fileutils" id="apidoc.module.testem.fileutils">module testem.fileutils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.fileutils.executableExists" id="apidoc.element.testem.fileutils.executableExists">
+        function <span class="apidocSignatureSpan">testem.fileutils.</span>executableExists
+        <span class="apidocSignatureSpan">(exe, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">executableExists = function (exe, options) {
+  var cmd = isWin ? 'where' : 'which';
+
+  return new Bluebird.Promise(function(resolve) {
+    var test = childProcess.spawn(cmd, [exe], options);
+    test.on('error', function(error) {
+      log.error('Error spawning "' + cmd + exe + '"', error);
+    });
+    test.on('close', function(exitCode) {
+      return resolve(exitCode === 0);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var Bluebird = require('bluebird');
+
+var fileutils = require('./fileutils');
+var envWithLocalPath = require('./env-with-local-path');
+
+var executableExists = function(exe) {
+return fileutils.<span class="apidocCodeKeywordSpan">executableExists</span>(exe, { env: envWithLocalPath() });
+};
+var fileExists = fileutils.fileExists;
+
+// Returns the available browsers on the current machine.
+function getAvailableBrowsers(config, browsers, cb) {
+browsers.forEach(function(b) {
+  b.protocol = 'browser';
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.fileutils.fileExists" id="apidoc.element.testem.fileutils.fileExists">
+        function <span class="apidocSignatureSpan">testem.fileutils.</span>fileExists
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fileExists = function (path) {
+  return fsStatAsync(path).then(function(stats) {
+    return stats.isFile();
+  }).catchReturn(false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.launcher" id="apidoc.module.testem.launcher">module testem.launcher</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.launcher" id="apidoc.element.testem.launcher.launcher">
+        function <span class="apidocSignatureSpan">testem.</span>launcher
+        <span class="apidocSignatureSpan">(name, settings, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Launcher(name, settings, config) {
+  this.name = name;
+  this.config = config;
+  this.settings = settings;
+  this.setupDefaultSettings();
+  this.id = settings.id || String(Math.floor(Math.random() * 10000));
+
+  this.processCtl = new ProcessCtl(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.launcher.prototype" id="apidoc.module.testem.launcher.prototype">module testem.launcher.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.browserTmpDir" id="apidoc.element.testem.launcher.prototype.browserTmpDir">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>browserTmpDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">browserTmpDir = function () {
+  var userDataDir = this.config.getUserDataDir();
+
+  return path.join(userDataDir, 'testem-' + this.id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  },
+  start: function() {
+return this.launch();
+  },
+  launch: function() {
+var self = this;
+var settings = this.settings;
+var dir = this.<span class="apidocCodeKeywordSpan">browserTmpDir</span>(this.config, this.id);
+
+return rimrafAsync(dir).then(function() {
+  return mkdirpAsync(dir);
+}).then(function() {
+  if (settings.setup) {
+    return Bluebird.fromCallback(function(setupCallback) {
+      settings.setup.call(self, self.config, setupCallback);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.commandLine" id="apidoc.element.testem.launcher.prototype.commandLine">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>commandLine
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commandLine = function () {
+  if (this.settings.command) {
+    return '"' + this.settings.command + '"';
+  } else if (this.settings.exe) {
+    return '"' + this.settings.exe +
+      ' ' + this.getArgs().join(' ') + '"';
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.doLaunch" id="apidoc.element.testem.launcher.prototype.doLaunch">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>doLaunch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doLaunch = function () {
+  var settings = this.settings;
+  var self = this;
+  var options = {};
+
+  if (settings.cwd) {
+    options.cwd = settings.cwd;
+  }
+
+  if (settings.exe) {
+    var args = self.getArgs();
+    args = self.template(args);
+
+    return this.processCtl.spawn(settings.exe, args, options);
+  } else if (settings.command) {
+    var cmd = this.template(settings.command);
+    log.info('cmd: ' + cmd);
+
+    return this.processCtl.exec(cmd, options);
+  } else {
+    return Bluebird.reject(new Error('No command or exe/args specified for launcher ' + this.name));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return Bluebird.fromCallback(function(setupCallback) {
+        settings.setup.call(self, self.config, setupCallback);
+      });
+    }
+
+    return Bluebird.resolve();
+  }).then(function() {
+    return self.<span class="apidocCodeKeywordSpan">doLaunch</span>();
+  });
+},
+doLaunch: function() {
+  var settings = this.settings;
+  var self = this;
+  var options = {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.getArgs" id="apidoc.element.testem.launcher.prototype.getArgs">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>getArgs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getArgs = function () {
+  var settings = this.settings;
+  var url = this.getUrl();
+  var args = [url];
+  if (settings.args instanceof Array) {
+    args = settings.args.concat(args);
+  } else if (settings.args instanceof Function) {
+    args = settings.args.call(this, this.config, url);
+  }
+  return args;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return this.settings.protocol || 'process';
+},
+commandLine: function() {
+  if (this.settings.command) {
+    return '"' + this.settings.command + '"';
+  } else if (this.settings.exe) {
+    return '"' + this.settings.exe +
+      ' ' + this.<span class="apidocCodeKeywordSpan">getArgs</span>().join(' ') + '"';
+  }
+},
+start: function() {
+  return this.launch();
+},
+launch: function() {
+  var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.getId" id="apidoc.element.testem.launcher.prototype.getId">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>getId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getId = function () {
+  return this.isProcess() ? -1 : this.id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+getId: function() {
+  return this.isProcess() ? -1 : this.id;
+},
+getUrl: function() {
+  var baseUrl = this.config.get('url');
+  var testPage = this.settings.test_page;
+  var id = this.<span class="apidocCodeKeywordSpan">getId</span>();
+
+  return baseUrl + id + (testPage ? '/' + testPage : '');
+},
+getArgs: function() {
+  var settings = this.settings;
+  var url = this.getUrl();
+  var args = [url];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.getUrl" id="apidoc.element.testem.launcher.prototype.getUrl">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>getUrl
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUrl = function () {
+  var baseUrl = this.config.get('url');
+  var testPage = this.settings.test_page;
+  var id = this.getId();
+
+  return baseUrl + id + (testPage ? '/' + testPage : '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var testPage = this.settings.test_page;
+  var id = this.getId();
+
+  return baseUrl + id + (testPage ? '/' + testPage : '');
+},
+getArgs: function() {
+  var settings = this.settings;
+  var url = this.<span class="apidocCodeKeywordSpan">getUrl</span>();
+  var args = [url];
+  if (settings.args instanceof Array) {
+    args = settings.args.concat(args);
+  } else if (settings.args instanceof Function) {
+    args = settings.args.call(this, this.config, url);
+  }
+  return args;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.isProcess" id="apidoc.element.testem.launcher.prototype.isProcess">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>isProcess
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isProcess = function () {
+  return this.settings.protocol !== 'browser';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  return this.processCtl.exec(cmd, options);
+} else {
+  return Bluebird.reject(new Error('No command or exe/args specified for launcher ' + this.name));
+}
+  },
+  getId: function() {
+return this.<span class="apidocCodeKeywordSpan">isProcess</span>() ? -1 : this.id;
+  },
+  getUrl: function() {
+var baseUrl = this.config.get('url');
+var testPage = this.settings.test_page;
+var id = this.getId();
+
+return baseUrl + id + (testPage ? '/' + testPage : '');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.launch" id="apidoc.element.testem.launcher.prototype.launch">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>launch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">launch = function () {
+  var self = this;
+  var settings = this.settings;
+  var dir = this.browserTmpDir(this.config, this.id);
+
+  return rimrafAsync(dir).then(function() {
+    return mkdirpAsync(dir);
+  }).then(function() {
+    if (settings.setup) {
+      return Bluebird.fromCallback(function(setupCallback) {
+        settings.setup.call(self, self.config, setupCallback);
+      });
+    }
+
+    return Bluebird.resolve();
+  }).then(function() {
+    return self.doLaunch();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return '"' + this.settings.command + '"';
+} else if (this.settings.exe) {
+  return '"' + this.settings.exe +
+    ' ' + this.getArgs().join(' ') + '"';
+}
+  },
+  start: function() {
+return this.<span class="apidocCodeKeywordSpan">launch</span>();
+  },
+  launch: function() {
+var self = this;
+var settings = this.settings;
+var dir = this.browserTmpDir(this.config, this.id);
+
+return rimrafAsync(dir).then(function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.protocol" id="apidoc.element.testem.launcher.prototype.protocol">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>protocol
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">protocol = function () {
+  return this.settings.protocol || 'process';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+
+    callback(null);
+  });
+},
+
+getRunnerFactory: function(launcher) {
+  var protocol = launcher.<span class="apidocCodeKeywordSpan">protocol</span>();
+  switch (protocol) {
+    case 'process':
+      return ProcessTestRunner;
+    case 'browser':
+      return BrowserTestRunner;
+    case 'tap':
+      return TapProcessTestRunner;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.setupDefaultSettings" id="apidoc.element.testem.launcher.prototype.setupDefaultSettings">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>setupDefaultSettings
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setupDefaultSettings = function () {
+  var settings = this.settings;
+  if (settings.protocol === 'tap' &amp;&amp; !('hide_stdout' in settings)) {
+    settings.hide_stdout = true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var rimrafAsync = Bluebird.promisify(rimraf);
+var mkdirpAsync = Bluebird.promisify(mkdirp);
+
+function Launcher(name, settings, config) {
+this.name = name;
+this.config = config;
+this.settings = settings;
+this.<span class="apidocCodeKeywordSpan">setupDefaultSettings</span>();
+this.id = settings.id || String(Math.floor(Math.random() * 10000));
+
+this.processCtl = new ProcessCtl(name);
+}
+
+Launcher.prototype = {
+setupDefaultSettings: function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.start" id="apidoc.element.testem.launcher.prototype.start">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+  return this.launch();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+startServer: function(callback) {
+  log.info('Starting server');
+  this.server = new Server(this.config);
+  this.server.on('file-requested', this.onFileRequested.bind(this));
+  this.server.on('browser-login', this.onBrowserLogin.bind(this));
+  this.server.on('server-error', this.onServerError.bind(this));
+
+  return this.server.<span class="apidocCodeKeywordSpan">start</span>().asCallback(callback);
+},
+
+getServer: function() {
+  var self = this;
+  return this.startServer().disposer(function() {
+    return self.stopServer();
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher.prototype.template" id="apidoc.element.testem.launcher.prototype.template">
+        function <span class="apidocSignatureSpan">testem.launcher.prototype.</span>template
+        <span class="apidocSignatureSpan">(thing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">template = function (thing) {
+  if (Array.isArray(thing)) {
+    return thing.map(this.template, this);
+  } else {
+    var params = {
+      cwd: this.config.cwd(),
+      url: this.getUrl(),
+      baseUrl: this.config.get('url'),
+      port: this.config.get('port'),
+      testPage: this.settings.test_page || '',
+      id: this.getId()
+    };
+    return template(thing, params);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    if (settings.cwd) {
+options.cwd = settings.cwd;
+    }
+
+    if (settings.exe) {
+var args = self.getArgs();
+args = self.<span class="apidocCodeKeywordSpan">template</span>(args);
+
+return this.processCtl.spawn(settings.exe, args, options);
+    } else if (settings.command) {
+var cmd = this.template(settings.command);
+log.info('cmd: ' + cmd);
+
+return this.processCtl.exec(cmd, options);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.launcher_factory" id="apidoc.module.testem.launcher_factory">module testem.launcher_factory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher_factory.launcher_factory" id="apidoc.element.testem.launcher_factory.launcher_factory">
+        function <span class="apidocSignatureSpan">testem.</span>launcher_factory
+        <span class="apidocSignatureSpan">(name, settings, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LauncherFactory(name, settings, config) {
+  this.name = name;
+  this.config = config;
+  this.settings = settings;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.launcher_factory.prototype" id="apidoc.module.testem.launcher_factory.prototype">module testem.launcher_factory.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.launcher_factory.prototype.create" id="apidoc.element.testem.launcher_factory.prototype.create">
+        function <span class="apidocSignatureSpan">testem.launcher_factory.prototype.</span>create
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (options) {
+  var settings = extend({}, this.settings, options);
+  return new Launcher(this.name, settings, this.config);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (err) {
+    return callback(err);
+  }
+
+  var testPages = self.config.get('test_page');
+  launchers.forEach(function(launcher) {
+    for (var i = 0; i &lt; testPages.length; i++) {
+      var launcherInstance = launcher.<span class="apidocCodeKeywordSpan">create</span>({ test_page: testPages[i] });
+      var runner = self.createTestRunner(launcherInstance, reporter);
+      self.addRunner(runner);
+    }
+  });
+
+  callback(null);
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.process_ctl" id="apidoc.module.testem.process_ctl">module testem.process_ctl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.process_ctl.process_ctl" id="apidoc.element.testem.process_ctl.process_ctl">
+        function <span class="apidocSignatureSpan">testem.</span>process_ctl
+        <span class="apidocSignatureSpan">(name, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProcessCtl(name, options) {
+  options = options || {};
+
+  this.name = name;
+  this.killTimeout = options.killTimeout || 5000;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.process_ctl.prototype" id="apidoc.module.testem.process_ctl.prototype">module testem.process_ctl.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.process_ctl.prototype.exeExists" id="apidoc.element.testem.process_ctl.prototype.exeExists">
+        function <span class="apidocSignatureSpan">testem.process_ctl.prototype.</span>exeExists
+        <span class="apidocSignatureSpan">(exe, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exeExists = function (exe, options) {
+  return fileExists(exe).then(function(exists) {
+    if (exists) {
+      return exists;
+    }
+
+    return executableExists(exe, options);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (Array.isArray(exe)) {
+return Bluebird.reduce(exe, function(found, exe) {
+  if (found) {
+    return found;
+  }
+
+  return self.<span class="apidocCodeKeywordSpan">exeExists</span>(exe, _options).then(function(exists) {
+    if (exists) {
+      return exe;
+    }
+  });
+}, false).then(function(found) {
+  if (!found) {
+    return Bluebird.reject(new Error('No executable found in: ' + util.inspect(exe)));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.process_ctl.prototype.exec" id="apidoc.element.testem.process_ctl.prototype.exec">
+        function <span class="apidocSignatureSpan">testem.process_ctl.prototype.</span>exec
+        <span class="apidocSignatureSpan">(cmd, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exec = function (cmd, options) {
+  log.info('executing: ' + cmd);
+  var cmdParts = spawnargs(cmd);
+  var exe = cmdParts[0];
+  var args = cmdParts.slice(1);
+
+  options = options || {};
+  options.shell = true; // exec uses a shell by default
+
+  return this.spawn(exe, args, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    args = self.template(args);
+
+    return this.processCtl.spawn(settings.exe, args, options);
+  } else if (settings.command) {
+    var cmd = this.template(settings.command);
+    log.info('cmd: ' + cmd);
+
+    return this.processCtl.<span class="apidocCodeKeywordSpan">exec</span>(cmd, options);
+  } else {
+    return Bluebird.reject(new Error('No command or exe/args specified for launcher ' + this.name));
+  }
+},
+getId: function() {
+  return this.isProcess() ? -1 : this.id;
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.process_ctl.prototype.prepareOptions" id="apidoc.element.testem.process_ctl.prototype.prepareOptions">
+        function <span class="apidocSignatureSpan">testem.process_ctl.prototype.</span>prepareOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prepareOptions = function (options) {
+  var defaults = {
+    env: envWithLocalPath()
+  };
+
+  return extend({}, defaults, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+env: envWithLocalPath()
+  };
+
+  return extend({}, defaults, options);
+};
+
+ProcessCtl.prototype.spawn = function(exe, args, options) {
+  var _options = this.<span class="apidocCodeKeywordSpan">prepareOptions</span>(options);
+
+  var self = this;
+  var spawn = function spawn(exe) {
+log.info('spawning: ' + exe + ' - ' + util.inspect(args));
+
+var p = new Process(this.name, { killTimeout: this.killTimeout }, crossSpawn(exe, args, _options));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.process_ctl.prototype.spawn" id="apidoc.element.testem.process_ctl.prototype.spawn">
+        function <span class="apidocSignatureSpan">testem.process_ctl.prototype.</span>spawn
+        <span class="apidocSignatureSpan">(exe, args, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spawn = function (exe, args, options) {
+  var _options = this.prepareOptions(options);
+
+  var self = this;
+  var spawn = function spawn(exe) {
+    log.info('spawning: ' + exe + ' - ' + util.inspect(args));
+
+    var p = new Process(this.name, { killTimeout: this.killTimeout }, crossSpawn(exe, args, _options));
+
+    this.emit('processStarted', p);
+
+    return Bluebird.resolve(p);
+  };
+
+  if (Array.isArray(exe)) {
+    return Bluebird.reduce(exe, function(found, exe) {
+      if (found) {
+        return found;
+      }
+
+      return self.exeExists(exe, _options).then(function(exists) {
+        if (exists) {
+          return exe;
+        }
+      });
+    }, false).then(function(found) {
+      if (!found) {
+        return Bluebird.reject(new Error('No executable found in: ' + util.inspect(exe)));
+      }
+
+      return spawn.call(self, found);
+    });
+  }
+
+  return spawn.call(this, exe);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+exports.fileExists = fileExists;
+
+var executableExists = function(exe, options) {
+var cmd = isWin ? 'where' : 'which';
+
+return new Bluebird.Promise(function(resolve) {
+  var test = childProcess.<span class="apidocCodeKeywordSpan">spawn</span>(cmd, [exe], options);
+  test.on('error', function(error) {
+    log.error('Error spawning "' + cmd + exe + '"', error);
+  });
+  test.on('close', function(exitCode) {
+    return resolve(exitCode === 0);
+  });
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.strutils" id="apidoc.module.testem.strutils">module testem.strutils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.strutils.indent" id="apidoc.element.testem.strutils.indent">
+        function <span class="apidocSignatureSpan">testem.strutils.</span>indent
+        <span class="apidocSignatureSpan">(text, width)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function indent(text, width) {
+  return text.split('\n').map(function(line) {
+    return new Array((width || 4) + 1).join(' ') + line;
+  }).join('\n');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function yamlDisplay(err, logs) {
+var testLogs;
+var failed = Object.keys(err || {})
+  .filter(function(key) {
+    return key !== 'passed';
+  })
+  .map(function(key) {
+    return key + ': &gt;\n' + strutils.<span class="apidocCodeKeywordSpan">indent</span>(String(err[key]));
+  });
+if (logs) {
+  testLogs = ['Log: |'].concat(logs.map(function(log) {return strutils.indent(util.inspect(log));}));
+} else {
+  testLogs = [];
+}
+return strutils.indent([
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.strutils.pad" id="apidoc.element.testem.strutils.pad">
+        function <span class="apidocSignatureSpan">testem.strutils.</span>pad
+        <span class="apidocSignatureSpan">(str, l, s, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pad(str, l, s, t) {
+  var ol = l;
+  return (s || (s = ' '), (l -= str.length) &gt; 0 ?
+    (s = new Array(Math.ceil(l / s.length) + 1).join(s))
+    .substr(0, t = !t ? l : t === 1 ? 0 :
+      Math.ceil(l / 2)) + str + s.substr(0, l - t) : str).substring(0, ol);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.strutils.splitLines" id="apidoc.element.testem.strutils.splitLines">
+        function <span class="apidocSignatureSpan">testem.strutils.</span>splitLines
+        <span class="apidocSignatureSpan">(text, colLimit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function splitLines(text, colLimit) {
+  if (!text) {
+    return [];
+  }
+  var firstSplit = text.split('\n');
+  var secondSplit = [];
+  firstSplit.forEach(function(line) {
+    while (line.length &gt; colLimit) {
+      var first = line.substring(0, colLimit);
+      secondSplit.push(first);
+      line = line.substring(colLimit);
+    }
+    secondSplit.push(line);
+  });
+  return secondSplit;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.strutils.template" id="apidoc.element.testem.strutils.template">
+        function <span class="apidocSignatureSpan">testem.strutils.</span>template
+        <span class="apidocSignatureSpan">(str, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function template(str, params) {
+  return !str.replace ? str : str.replace(/&lt;(.+?)&gt;/g, function(unchanged, name) {
+    return name in params ? params[name] : unchanged;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    if (settings.cwd) {
+options.cwd = settings.cwd;
+    }
+
+    if (settings.exe) {
+var args = self.getArgs();
+args = self.<span class="apidocCodeKeywordSpan">template</span>(args);
+
+return this.processCtl.spawn(settings.exe, args, options);
+    } else if (settings.command) {
+var cmd = this.template(settings.command);
+log.info('cmd: ' + cmd);
+
+return this.processCtl.exec(cmd, options);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.tap_consumer" id="apidoc.module.testem.tap_consumer">module testem.tap_consumer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.tap_consumer.tap_consumer" id="apidoc.element.testem.tap_consumer.tap_consumer">
+        function <span class="apidocSignatureSpan">testem.</span>tap_consumer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TapConsumer() {
+  this.stream = new TapParser();
+  this.stream.on('assert', this.onTapAssert.bind(this));
+  this.stream.on('extra', this.onTapExtra.bind(this));
+
+  this.stream.on('complete', this.onTapEnd.bind(this));
+  this.stream.on('bailout', this.onTapError.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.testem.tap_consumer.prototype" id="apidoc.module.testem.tap_consumer.prototype">module testem.tap_consumer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.testem.tap_consumer.prototype.onTapAssert" id="apidoc.element.testem.tap_consumer.prototype.onTapAssert">
+        function <span class="apidocSignatureSpan">testem.tap_consumer.prototype.</span>onTapAssert
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onTapAssert = function (data) {
+  log.info(data);
+  if (data.skip) {
+    return;
+  }
+
+  if (data.id === undefined) {
+    return;
+  }
+
+  var test = {
+    passed: 0,
+    failed: 0,
+    total: 1,
+    id: data.id,
+    name: data.name ? data.name.trim() : '',
+    items: []
+  };
+
+  if (!data.ok) {
+    var stack;
+    if (data.diag) {
+      stack = data.diag.stack || data.diag.at;
+    }
+    if (stack) {
+      stack = yaml.dump(stack);
+    }
+    data = extend(data, data.diag);
+
+    this.latestItem = extend(data, {
+      passed: false,
+      stack: stack
+    });
+    test.items.push(this.latestItem);
+    test.failed++;
+  } else {
+    test.passed++;
+  }
+  this.emit('test-result', test);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.tap_consumer.prototype.onTapEnd" id="apidoc.element.testem.tap_consumer.prototype.onTapEnd">
+        function <span class="apidocSignatureSpan">testem.tap_consumer.prototype.</span>onTapEnd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onTapEnd = function () {
+  this.stream.removeAllListeners();
+  this.emit('all-test-results');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.tap_consumer.prototype.onTapError" id="apidoc.element.testem.tap_consumer.prototype.onTapError">
+        function <span class="apidocSignatureSpan">testem.tap_consumer.prototype.</span>onTapError
+        <span class="apidocSignatureSpan">(reason)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onTapError = function (reason) {
+  var test = {
+    failed: 1,
+    name: 'bailout',
+    items: [],
+    error: {
+      message: reason
+    }
+  };
+
+  this.stream.removeAllListeners();
+  this.emit('test-result', test);
+  this.emit('all-test-results');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.testem.tap_consumer.prototype.onTapExtra" id="apidoc.element.testem.tap_consumer.prototype.onTapExtra">
+        function <span class="apidocSignatureSpan">testem.tap_consumer.prototype.</span>onTapExtra
+        <span class="apidocSignatureSpan">(extra)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onTapExtra = function (extra) {
+  if (!this.latestItem) {
+    return;
+  }
+
+  if (this.latestItem.stack) {
+    this.latestItem.stack += extra;
+  } else {
+    this.latestItem.stack = extra;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
