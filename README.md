@@ -1,6 +1,6 @@
 # npmdoc-testem
 
-#### api documentation for  [testem (v1.15.0)](https://github.com/testem/testem#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-testem.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-testem) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-testem.svg)](https://travis-ci.org/npmdoc/node-npmdoc-testem)
+#### basic api documentation for  [testem (v1.16.0)](https://github.com/testem/testem#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-testem.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-testem) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-testem.svg)](https://travis-ci.org/npmdoc/node-npmdoc-testem)
 
 #### Test'em 'scripts! Javascript Unit testing made easy.
 
@@ -36,7 +36,7 @@
         "charm": "^1.0.0",
         "commander": "^2.6.0",
         "consolidate": "^0.14.0",
-        "cross-spawn": "^5.0.0",
+        "cross-spawn": "^5.1.0",
         "express": "^4.10.7",
         "fireworm": "^0.7.0",
         "glob": "^7.0.4",
@@ -45,6 +45,7 @@
         "lodash.assignin": "^4.1.0",
         "lodash.clonedeep": "^4.4.1",
         "lodash.find": "^4.5.1",
+        "lodash.uniqby": "^4.7.0",
         "mkdirp": "^0.5.1",
         "mustache": "^2.2.1",
         "node-notifier": "^5.0.1",
@@ -80,8 +81,8 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "2e3a9e7ac29f16a20f718eb0c4b12e7a44900675",
-        "tarball": "https://registry.npmjs.org/testem/-/testem-1.15.0.tgz"
+        "shasum": "3933040b5d5b5fbdb6a2b1e7032e511b54a05867",
+        "tarball": "https://registry.npmjs.org/testem/-/testem-1.16.0.tgz"
     },
     "engines": [
         "node >= 0.8.0"
@@ -95,7 +96,7 @@
         "package.json",
         "views"
     ],
-    "gitHead": "9dc9ede07003fe039e8034fd21451fda4245d0cb",
+    "gitHead": "b3bc9896a3f68fe8b25c495881f5ef3807624b6e",
     "homepage": "https://github.com/testem/testem#readme",
     "keywords": [
         "javascript",
@@ -128,7 +129,7 @@
         "test": "./bin/run-tests.js",
         "testem-tests": "mocha --opts tests/mocha.opts tests/*_tests.js tests/**/*_tests.js"
     },
-    "version": "1.15.0"
+    "version": "1.16.0"
 }
 ```
 
